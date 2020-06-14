@@ -1,0 +1,21 @@
+OUT = 	if GREENFLAG then OUT | if KeyPressed K then OUT|
+		Move N OUT |Move N |
+		TURN Right P OUT | TURN Right P |
+		TURN Left P OUT | TURN Left P | 
+		Point Dir OUT | Point Dir| 
+		SetX N OUT | SetX N|
+		SetY N OUT| SetY N|
+		ChangeXBy N OUT| ChangeXBy N|
+		ChangeYBy N OUT| ChangeYBy N|
+		GoTo N N OUT| GoTo N M|
+		Repeat P OUT endRepeat OUT| Repeat N OUT endRepeat|
+		if COND then OUT endThen OUT| if COND OUT endThen| 
+		if COND OUT then endThen else OUT endElse OUT | if COND OUT endThen else OUT endElse
+
+N = number | mousex | mousey | xposition| yposition
+M = number | mousex | mousey | xposition| yposition
+P=number
+K= key
+C= Hex_color
+DIR = 90|180|0|360
+COND = N > M | N < M | N == M | Key K ispressed | Color C istouched
